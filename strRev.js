@@ -16,4 +16,16 @@ function reverse(str) {
   console.log(revstr);
 }
 
-reverse("hello");
+reverse("i love you"); // uoy evol i
+
+// ? method 2
+
+function revStr(str) {
+  let rev = "";
+  for (let char of str) {
+    rev = char + rev;
+  }
+  console.log(rev);
+}
+
+revStr("sirajul");
