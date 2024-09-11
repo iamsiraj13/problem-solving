@@ -1,13 +1,27 @@
-/**
- *  Write a function that returns the sum of two numbers.
- *  write a function tha returns the sum of all number regardless of # of params
- */
+/*
+? Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-function twoSum(...num) {
-  let count = 0;
-  for (let i = 0; i < num.length; i++) {
-    count += num[i];
+? You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+? You can return the answer in any order.
+
+ 
+
+* @ Example 1:
+
+* Input: nums = [2,7,11,15], target = 9
+* Output: [0,1]
+* Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+*/
+
+function twoSum(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        return [i, j];
+      }
+    }
   }
-  console.log(count);
 }
-twoSum(1, 2);
+
+console.log(twoSum([2, 7, 11, 15], 9));
